@@ -1,0 +1,10 @@
+{
+  "arrowParens": "avoid",
+  "printWidth": 1000,
+  "bracketSameLine": true,
+  "bracketSpacing": false,
+  "objectWrap": "collapse",
+  "semi": false,
+  "singleAttributePerLine": false,
+  "trailingComma": "none"
+}

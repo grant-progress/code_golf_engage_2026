@@ -1,0 +1,19 @@
+{
+  "name": "code_golf",
+  "dependencies": {
+    "@types/node": "24.2.1"
+  },
+  "engines": {
+    "node": "24.5.0"
+  },
+  "volta": {
+    "node": "24.5.0"
+  },
+  "scripts": {
+    "test": "vitest",
+    "start": "node ./main.mjs"
+  },
+  "devDependencies": {
+    "vitest": "^3.2.4"
+  }
+}
