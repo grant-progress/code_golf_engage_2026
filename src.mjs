@@ -3,7 +3,7 @@ import * as fs from "fs";
 let p = [[1000, "M"],[500, "D"],[400, "CD"],[100, "C"],[50, "L"],[40, "XL"],[10, "X"],[5, "V"],[4, "IV"]],
 v,o,x,r,l;
 
-for (l of fs.readFileSync(process.argv[2]).split("\n")) {
+for (l of fs.readFileSync(process.argv[2],'utf-8').split("\n")) {
   v = "I".repeat(0+l);
   o = "";
   for ([x,r] of p) while (v.length >= x) (o += r) && (v = v.slice(x));

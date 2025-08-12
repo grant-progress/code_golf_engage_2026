@@ -24,5 +24,5 @@ it("produces the right output", async () => {
 
 it("golfs", async () => {
   const content = await fs.readFile("./main.mjs", "utf-8")
-  expect(content.length).toMatchInlineSnapshot(`320`)
+  expect(content.length).toMatchInlineSnapshot(`328`)
 })
