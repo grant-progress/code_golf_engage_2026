@@ -1,3 +1,8 @@
+# Instructions for my repo
+
+Install Node/NPM
+`npm start`
+
 # What is Code Golf?
 
 > Code golf is a type of recreational computer programming competition in which participants strive to achieve the shortest possible source code that solves a certain problem. Code golf challenges and tournaments may also be named with the programming language used. --- [Wikipedia](https://en.wikipedia.org/wiki/Code_golf)
@@ -8,7 +13,6 @@
 2. **NO AI**
 3. Don't Google/Bing/DDG/Kagi for answers.
 4. All pull requests must be opened before Aug 14 2025 11:30 AM EDT.
-
 
 The shortest _correct_ program wins. In the event no submissions fully pass the test suite winners will be selected by number of passing test cases and code brevity.
 
@@ -81,4 +85,3 @@ if __name__ == "__main__":
 ```
 
 This repo contains a [sample file](https://github.com/kevsmith/code_golf/blob/main/input.txt) you can use for development.
-
