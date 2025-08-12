@@ -1,5 +1,7 @@
 {
   "github.copilot.enable": {
     "*": false
-  }
+  },
+  "prettier.enable": false,
+  "prettier.requireConfig": true
 }

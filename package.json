@@ -11,7 +11,8 @@
   },
   "scripts": {
     "test": "vitest",
-    "start": "node ./main.mjs"
+    "start": "node ./main.mjs",
+    "min": "node ./min.mjs"
   },
   "devDependencies": {
     "vitest": "^3.2.4"
