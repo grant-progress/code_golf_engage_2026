@@ -11,7 +11,8 @@
   },
   "scripts": {
     "test": "vitest",
-    "start": "pnpm min && node ./main.mjs ./input.txt",
+    "dev": "pnpm min && node ./main.mjs ./input.txt",
+    "start": "node ./main.mjs",
     "min": "node ./min.mjs"
   },
   "devDependencies": {
