@@ -8,6 +8,8 @@ vi.mock("fs", () => ({
 243
 401
 3277
+90
+449
 `
 }))
 
@@ -20,9 +22,11 @@ it("produces the right output", async () => {
   expect(log).toHaveBeenNthCalledWith(3, "CCXLIII")
   expect(log).toHaveBeenNthCalledWith(4, "CDI")
   expect(log).toHaveBeenNthCalledWith(5, "MMMCCLXXVII")
+  expect(log).toHaveBeenNthCalledWith(6, "XC");
+  expect(log).toHaveBeenNthCalledWith(7, "CDXLIX")
 })
 
 it("golfs", async () => {
   const content = await fs.readFile("./main.mjs", "utf-8")
-  expect(content.length).toMatchInlineSnapshot(`292`)
+  expect(content.length).toMatchInlineSnapshot(`302`)
 })
