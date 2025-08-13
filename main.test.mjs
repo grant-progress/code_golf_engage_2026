@@ -10,23 +10,33 @@ vi.mock("fs", () => ({
 3277
 90
 449
+1199
+905
 `
 }))
+
+const outputs = [
+  'XLIII',
+  'CIV',
+  'CCXLIII',
+  'CDI',
+  'MMMCCLXXVII',
+  'XC',
+  'CDXLIX',
+  'MCXCIX',
+  'CMV'
+]
 
 let log = vi.spyOn(console, "log")
 
 it("produces the right output", async () => {
   await import("./src.mjs")
-  expect(log).toHaveBeenNthCalledWith(1, "XLIII")
-  expect(log).toHaveBeenNthCalledWith(2, "CIV")
-  expect(log).toHaveBeenNthCalledWith(3, "CCXLIII")
-  expect(log).toHaveBeenNthCalledWith(4, "CDI")
-  expect(log).toHaveBeenNthCalledWith(5, "MMMCCLXXVII")
-  expect(log).toHaveBeenNthCalledWith(6, "XC");
-  expect(log).toHaveBeenNthCalledWith(7, "CDXLIX")
+  for (let i = 0; i < outputs.length; i++) {
+    expect(log).toHaveBeenNthCalledWith(i + 1, outputs[i]);
+  }
 })
 
 it("golfs", async () => {
   const content = await fs.readFile("./main.mjs", "utf-8")
-  expect(content.length).toMatchInlineSnapshot(`302`)
+  expect(content.length).toMatchInlineSnapshot(`313`)
 })
