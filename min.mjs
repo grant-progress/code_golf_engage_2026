@@ -1,4 +1,7 @@
 import * as fs from 'fs';
 
-const content = fs.readFileSync('./src.mjs', 'utf-8');
-fs.writeFileSync('./main.mjs', content.replace(/\n+/g, '').replace(/\t+/g,''));
+
+fs.watchFile('./src.mjs', { }, (cur) => {
+	const content = fs.readFileSync('./src.mjs', 'utf-8');
+	fs.writeFileSync('./main.mjs', content.replace(/\/\/.*$/gm,'').replace(/\n+/g, '').replace(/\t+/g,''));
+})

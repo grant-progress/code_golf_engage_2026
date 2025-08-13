@@ -36,6 +36,13 @@ it("produces the right output", async () => {
   }
 })
 
+it("produces the right output minified", async () => {
+  await import("./main.mjs")
+  for (let i = 0; i < outputs.length; i++) {
+    expect(log).toHaveBeenNthCalledWith(i + 1, outputs[i]);
+  }
+})
+
 it("golfs", async () => {
   const content = await fs.readFile("./main.mjs", "utf-8")
   expect(content.length).toMatchInlineSnapshot(`313`)
